@@ -5,3 +5,17 @@
 # прибыли к выручке. Далее запросите численность сотрудников фирмы и определите прибыль
 # фирмы в расчёте на одного сотрудника
 
+proceed = int(input('Введите значение выручки фирмы: '))
+cost = int(input('Введите значение издержек фирмы: '))
+workers = int(input('Введите количество сотрудников фирмы: '))
+
+if proceed > cost:
+    profit = proceed - cost
+    profitability = profit / proceed
+    print(f'Фирма отработала с прибылью. Прибыль: {profit}')
+    print(f'Рентабильность фирмы: {profitability:.3f}')
+    workers_profit = profit / workers
+    print(f'Прибыль фирмы на одного сотрудника: {workers_profit:.3f}')
+else:
+    lesion = cost - proceed
+    print(f'Фирма отработала с убытком. Убыток: {lesion}')
